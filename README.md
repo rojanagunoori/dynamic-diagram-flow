@@ -11,6 +11,12 @@
 
 A visual pipeline builder built with **React**, **React Flow**, **Zustand**, and **Tailwind CSS** — allowing users to design, connect, and validate data or AI processing flows.
 
+![React](https://img.shields.io/badge/React-18+-blue?logo=react)
+![React Flow](https://img.shields.io/badge/ReactFlow-11.x-orange)
+![Zustand](https://img.shields.io/badge/State-Zustand-4B8BBE)
+![TailwindCSS](https://img.shields.io/badge/Style-TailwindCSS-06B6D4)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
+
 🌐 **Live Demo:** [https://dynamic-diagram-flow-react.netlify.app/](https://dynamic-diagram-flow-react.netlify.app/)  
 📦 **Repository:** [https://github.com/rojanagunoori/dynamic-diagram-flow](https://github.com/rojanagunoori/dynamic-diagram-flow)
 
@@ -104,7 +110,7 @@ Runs the app in development mode on http://localhost:3000
 ```bash
 npm run build
 ```
-### 🧠 How It Works
+## 🧠 How It Works
 1. **Drag** a node (e.g., Text, LLM, Output) from the toolbar.
 
 2. **Connect** handles by dragging between nodes.
@@ -129,6 +135,16 @@ npm run build
 Your graph is validated using a simple DFS-based cycle detection algorithm (isDAG.js).
 If the graph contains cycles, the UI displays an error alert.
 
+---
+## 🧭 Roadmap
+
+- [ ] Execute pipeline and preview results
+- [ ] Add OpenAI API integration with key management
+- [ ] Export/import flow as JSON
+- [ ] Multi-file download support
+- [ ] Real-time collaboration support
+
+ ---
 ## 🧑‍💻 Contributing
 1. Fork the repository
 
@@ -139,6 +155,13 @@ git checkout -b feature/my-new-node
 3. Commit changes and push
 
 4. Submit a Pull Request 🚀
+
+## 🙌 Acknowledgments
+
+- [React Flow](https://reactflow.dev/) — Node editor framework
+- [Zustand](https://zustand-demo.pmnd.rs/) — State management
+- [Lucide Icons](https://lucide.dev/) — Icons
+- [Tailwind CSS](https://tailwindcss.com/) — Styling framework
 
 ## 🪪 License
 This project is licensed under the MIT License.
