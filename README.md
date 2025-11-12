@@ -1,70 +1,151 @@
-# Getting Started with Create React App
+# 🧩 Dynamic Diagram Flow
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🖼️ Screenshots
 
-## Available Scripts
+### 1️⃣ Empty Canvas
+![Empty Pipeline](public/screenshot-1-empty.png)
 
-In the project directory, you can run:
+### 2️⃣ Completed Flow
+![Full Pipeline](public/screenshot-2-full-pipeline.png)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+A visual pipeline builder built with **React**, **React Flow**, **Zustand**, and **Tailwind CSS** — allowing users to design, connect, and validate data or AI processing flows.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🌐 **Live Demo:** [https://dynamic-diagram-flow-react.netlify.app/](https://dynamic-diagram-flow-react.netlify.app/)  
+📦 **Repository:** [https://github.com/rojanagunoori/dynamic-diagram-flow](https://github.com/rojanagunoori/dynamic-diagram-flow)
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🚀 Overview
 
-### `npm run build`
+Dynamic Diagram Flow enables drag-and-drop creation of connected processing nodes, such as **Text**, **LLM**, **File**, and **Output** nodes.  
+Each node can have editable settings, and you can link outputs to inputs to build a dynamic data pipeline.  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+You can also validate your flow to check if it forms a **Directed Acyclic Graph (DAG)** before execution.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## ✨ Features
 
-### `npm run eject`
+✅ **Drag & Drop Nodes** — Build workflows easily using React Flow.  
+✅ **Custom Node Types:**
+- **TextNode:** Write text and dynamically extract variables (`{{variable}}`).
+- **LLMNode:** Connect to GPT models, customize system & prompt inputs.
+- **OutputNode:** Define output field name & type.
+- **TextToFileNode:** Convert text to downloadable files (PDF, DOCX, TXT).
+- **FileSaveNode:** Save files with custom names.
+- **EditableDiv:** Inline text editing with variable detection.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+✅ **Pipeline Validation:**  
+Checks if your flow is a valid **DAG (Directed Acyclic Graph)** using a depth-first search algorithm.  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+✅ **State Management:**  
+Uses **Zustand** for managing nodes, edges, and updates efficiently.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+✅ **Modern UI:**  
+Built with **Tailwind CSS**, **Lucide React Icons**, and smooth shadows for an elegant design.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 🛠️ Tech Stack
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **React 18+**
+- **React Flow** — node-based editor framework
+- **Zustand** — state management
+- **Tailwind CSS** — styling
+- **Lucide-react** — icons
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 📂 Project Structure
+```bash
+dynamic-diagram-flow/
+│
+├── public/ # Static assets
+├── src/
+│ ├── components/
+│ │ └── EditableDiv.js
+│ ├── edges/
+│ ├── pages/
+│ │ ├── nodes/ # Custom node components
+│ │ ├── utils/ # Utility functions (e.g., isDAG)
+│ │ ├── PipelineUI.js
+│ │ ├── PipelineToolbar.js
+│ │ ├── SubmitButton.js
+│ │ └── store.js
+│ ├── App.js
+│ └── index.js
+│
+├── package.json
+├── tailwind.config.js
+├── postcss.config.js
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## ⚙️ Installation & Setup
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Prerequisites
+- Node.js 16+
+- npm or yarn
 
-### Making a Progressive Web App
+### Install dependencies
+```bash
+npm install
+```
+### Run locally
+```bash
+npm start
+```
+Runs the app in development mode on http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Build for production
+```bash
+npm run build
+```
+### 🧠 How It Works
+1. **Drag** a node (e.g., Text, LLM, Output) from the toolbar.
 
-### Advanced Configuration
+2. **Connect** handles by dragging between nodes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. **Edit** content dynamically inside nodes.
 
-### Deployment
+4. **Validate** your pipeline using the **Submit** button — checks if your graph is a valid DAG.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+5. **Extend** the flow by adding new node types inside src/pages/nodes/.
 
-### `npm run build` fails to minify
+## 🧩 Example Nodes
+| Node                  | Purpose                                      |
+| --------------------- | -------------------------------------------- |
+| 📝 **TextNode**       | Create text templates using `{{variables}}`. |
+| 🧠 **LLMNode**        | Generate AI responses using GPT models.      |
+| 📄 **TextToFileNode** | Convert generated text to a file format.     |
+| 💾 **FileSaveNode**   | Save one or more files to local storage.     |
+| 🔚 **OutputNode**     | Display or define output of the pipeline.    |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+## ✅ Validation Logic
+Your graph is validated using a simple DFS-based cycle detection algorithm (isDAG.js).
+If the graph contains cycles, the UI displays an error alert.
+
+## 🧑‍💻 Contributing
+1. Fork the repository
+
+2. Create a feature branch
+```bash
+git checkout -b feature/my-new-node
+```
+3. Commit changes and push
+
+4. Submit a Pull Request 🚀
+
+## 🪪 License
+This project is licensed under the MIT License.
+
+## 👩‍💻 Author
+Rojanagunoori Roja
+
+📧 Email: rojanagunoori@gmail.com
+
+🌐 Portfolio: https://portfolio-roja.netlify.app/
