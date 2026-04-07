@@ -1,13 +1,20 @@
 # 🧩 Dynamic Diagram Flow
 
+<video controls style="max-width: 100%;">
+  <source src="https://raw.githubusercontent.com/rojanagunoori/dynamic-diagram-flow/main/public/dynamic-diagram.mp4">
+</video>
+
+<!-- [▶ Watch Demo](https://raw.githubusercontent.com/rojanagunoori/dynamic-diagram-flow/main/public/dynamic-diagram.mp4) -->
+
 ## 🖼️ Screenshots
 
 ### 1️⃣ Empty Canvas
-![Empty Pipeline](public/screenshot-1-empty.png)
+
+![Empty Pipeline](https://raw.githubusercontent.com/rojanagunoori/dynamic-diagram-flow/main/public/screenshot-1-empty.png)
 
 ### 2️⃣ Completed Flow
-![Full Pipeline](public/screenshot-2-full-pipeline.png)
 
+![Full Pipeline](https://raw.githubusercontent.com/rojanagunoori/dynamic-diagram-flow/main/public/screenshot-2-full-pipeline.png)
 
 A visual pipeline builder built with **React**, **React Flow**, **Zustand**, and **Tailwind CSS** — allowing users to design, connect, and validate data or AI processing flows.
 
@@ -25,7 +32,7 @@ A visual pipeline builder built with **React**, **React Flow**, **Zustand**, and
 ## 🚀 Overview
 
 Dynamic Diagram Flow enables drag-and-drop creation of connected processing nodes, such as **Text**, **LLM**, **File**, and **Output** nodes.  
-Each node can have editable settings, and you can link outputs to inputs to build a dynamic data pipeline.  
+Each node can have editable settings, and you can link outputs to inputs to build a dynamic data pipeline.
 
 You can also validate your flow to check if it forms a **Directed Acyclic Graph (DAG)** before execution.
 
@@ -35,6 +42,7 @@ You can also validate your flow to check if it forms a **Directed Acyclic Graph 
 
 ✅ **Drag & Drop Nodes** — Build workflows easily using React Flow.  
 ✅ **Custom Node Types:**
+
 - **TextNode:** Write text and dynamically extract variables (`{{variable}}`).
 - **LLMNode:** Connect to GPT models, customize system & prompt inputs.
 - **OutputNode:** Define output field name & type.
@@ -43,7 +51,7 @@ You can also validate your flow to check if it forms a **Directed Acyclic Graph 
 - **EditableDiv:** Inline text editing with variable detection.
 
 ✅ **Pipeline Validation:**  
-Checks if your flow is a valid **DAG (Directed Acyclic Graph)** using a depth-first search algorithm.  
+Checks if your flow is a valid **DAG (Directed Acyclic Graph)** using a depth-first search algorithm.
 
 ✅ **State Management:**  
 Uses **Zustand** for managing nodes, edges, and updates efficiently.
@@ -64,6 +72,7 @@ Built with **Tailwind CSS**, **Lucide React Icons**, and smooth shadows for an e
 ---
 
 ## 📂 Project Structure
+
 ```bash
 dynamic-diagram-flow/
 │
@@ -93,24 +102,32 @@ dynamic-diagram-flow/
 ## ⚙️ Installation & Setup
 
 ### Prerequisites
+
 - Node.js 16+
 - npm or yarn
 
 ### Install dependencies
+
 ```bash
 npm install
 ```
+
 ### Run locally
+
 ```bash
 npm start
 ```
+
 Runs the app in development mode on http://localhost:3000
 
 ### Build for production
+
 ```bash
 npm run build
 ```
+
 ## 🧠 How It Works
+
 1. **Drag** a node (e.g., Text, LLM, Output) from the toolbar.
 
 2. **Connect** handles by dragging between nodes.
@@ -122,6 +139,7 @@ npm run build
 5. **Extend** the flow by adding new node types inside src/pages/nodes/.
 
 ## 🧩 Example Nodes
+
 | Node                  | Purpose                                      |
 | --------------------- | -------------------------------------------- |
 | 📝 **TextNode**       | Create text templates using `{{variables}}`. |
@@ -130,12 +148,13 @@ npm run build
 | 💾 **FileSaveNode**   | Save one or more files to local storage.     |
 | 🔚 **OutputNode**     | Display or define output of the pipeline.    |
 
-
 ## ✅ Validation Logic
+
 Your graph is validated using a simple DFS-based cycle detection algorithm (isDAG.js).
 If the graph contains cycles, the UI displays an error alert.
 
 ---
+
 ## 🧭 Roadmap
 
 - [ ] Execute pipeline and preview results
@@ -144,14 +163,18 @@ If the graph contains cycles, the UI displays an error alert.
 - [ ] Multi-file download support
 - [ ] Real-time collaboration support
 
- ---
+  ***
+
 ## 🧑‍💻 Contributing
+
 1. Fork the repository
 
 2. Create a feature branch
+
 ```bash
 git checkout -b feature/my-new-node
 ```
+
 3. Commit changes and push
 
 4. Submit a Pull Request 🚀
@@ -164,9 +187,11 @@ git checkout -b feature/my-new-node
 - [Tailwind CSS](https://tailwindcss.com/) — Styling framework
 
 ## 🪪 License
+
 This project is licensed under the MIT License.
 
 ## 👩‍💻 Author
+
 Rojanagunoori Roja
 
 📧 Email: rojanagunoori@gmail.com
